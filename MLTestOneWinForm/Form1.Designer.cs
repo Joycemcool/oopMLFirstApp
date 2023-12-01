@@ -32,13 +32,15 @@
             txtReview = new TextBox();
             lblGuess = new Label();
             lblConfidence = new Label();
+            btnTrain = new Button();
             SuspendLayout();
             // 
             // Guess
             // 
-            Guess.Location = new Point(213, 141);
+            Guess.Location = new Point(396, 301);
+            Guess.Margin = new Padding(6);
             Guess.Name = "Guess";
-            Guess.Size = new Size(75, 23);
+            Guess.Size = new Size(139, 49);
             Guess.TabIndex = 0;
             Guess.Text = "Guess";
             Guess.UseVisualStyleBackColor = true;
@@ -46,38 +48,54 @@
             // 
             // txtReview
             // 
-            txtReview.Location = new Point(218, 74);
+            txtReview.Location = new Point(405, 158);
+            txtReview.Margin = new Padding(6);
             txtReview.Name = "txtReview";
-            txtReview.Size = new Size(452, 23);
+            txtReview.Size = new Size(836, 39);
             txtReview.TabIndex = 1;
             // 
             // lblGuess
             // 
             lblGuess.BackColor = SystemColors.ControlLight;
-            lblGuess.Location = new Point(450, 145);
+            lblGuess.Location = new Point(836, 309);
+            lblGuess.Margin = new Padding(6, 0, 6, 0);
             lblGuess.Name = "lblGuess";
-            lblGuess.Size = new Size(100, 23);
+            lblGuess.Size = new Size(186, 49);
             lblGuess.TabIndex = 2;
             // 
             // lblConfidence
             // 
             lblConfidence.BackColor = SystemColors.ControlLight;
-            lblConfidence.Location = new Point(450, 201);
+            lblConfidence.Location = new Point(836, 429);
+            lblConfidence.Margin = new Padding(6, 0, 6, 0);
             lblConfidence.Name = "lblConfidence";
-            lblConfidence.Size = new Size(100, 28);
+            lblConfidence.Size = new Size(186, 60);
             lblConfidence.TabIndex = 3;
+            // 
+            // btnTrain
+            // 
+            btnTrain.Location = new Point(413, 444);
+            btnTrain.Name = "btnTrain";
+            btnTrain.Size = new Size(150, 46);
+            btnTrain.TabIndex = 4;
+            btnTrain.Text = "Train";
+            btnTrain.UseVisualStyleBackColor = true;
+            btnTrain.Click += btnTrain_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1486, 960);
+            Controls.Add(btnTrain);
             Controls.Add(lblConfidence);
             Controls.Add(lblGuess);
             Controls.Add(txtReview);
             Controls.Add(Guess);
+            Margin = new Padding(6);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -88,5 +106,6 @@
         private TextBox txtReview;
         private Label lblGuess;
         private Label lblConfidence;
+        private Button btnTrain;
     }
 }
